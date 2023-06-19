@@ -1,7 +1,6 @@
 class API {
   static const String host = 'connect.squareupsandbox.com';
-  static const String accesstoken =
-      'EAAAEEO5ixB03FavhJ4Nz3k4oVukmqt1xstfqC8z4_knjxlnGapRoVzDX_zs6lbW';
+
 
   Uri createCustomerPost() => Uri(
         scheme: 'https',

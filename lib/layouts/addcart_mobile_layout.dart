@@ -1,5 +1,6 @@
 import 'package:bizbora/api/api.dart';
 import 'package:bizbora/api/api_service.dart';
+import 'package:bizbora/api/environment.dart';
 import 'package:bizbora/constants/textstyle.dart';
 import 'package:bizbora/models/address_model.dart';
 import 'package:bizbora/models/create_customer_request.dart';
@@ -32,8 +33,7 @@ class _AddCartMobileLayoutState extends State<AddCartMobileLayout> {
 
   Future<void> sendAPItest() async {
     try {
-      String accesstoken =
-          'EAAAEEO5ixB03FavhJ4Nz3k4oVukmqt1xstfqC8z4_knjxlnGapRoVzDX_zs6lbW';
+      String accesstoken = kaccesstoken;
 
       final api = API();
       final apitest = APIService(api);

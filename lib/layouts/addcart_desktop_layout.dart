@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uuid/uuid.dart';
+import '../api/environment.dart';
 
 import '../constants/colors.dart';
 import '../pages/homepage.dart';
@@ -33,8 +34,7 @@ class _AddCartDesktopLayoutState extends State<AddCartDesktopLayout> {
 
   Future<void> sendAPItest() async {
     try {
-      String accesstoken =
-          'EAAAEEO5ixB03FavhJ4Nz3k4oVukmqt1xstfqC8z4_knjxlnGapRoVzDX_zs6lbW';
+      String accesstoken = kaccesstoken;
 
       final api = API();
       final apitest = APIService(api);
