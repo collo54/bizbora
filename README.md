@@ -1,16 +1,10 @@
-# bizbora
+# BizBora online platform
 
-A new Flutter project.
+BizBora is an online platform for people to showcase their products and skills to boost earnings.
+The project aims to integrate square APIs such as products API, orders API, customer API, and 
+invoices API to have a seamless online experience for both sellers and buyers. Follow the link to 
+interact with the project user interface. (https://bizbora.web.app)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![BIZ BORA MOCKUP](https://github.com/collo54/bizbora/assets/73790720/4ca41c0a-3a96-4905-94f9-75f53ab1ca48)
