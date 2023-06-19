@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "187949127471",
+    "project_id": "bizbora",
+    "storage_bucket": "bizbora.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187949127471:android:77b20a38e260ea1d7573da",
+        "android_client_info": {
+          "package_name": "com.example.bizbora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187949127471-pjng4fcjl09k8lpvo0gb5frpuoncj9s7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhTHQWVOi8E1mNEw6DEUSTaXwg23_uN-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187949127471-pjng4fcjl09k8lpvo0gb5frpuoncj9s7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "187949127471-8sbuij4mh79vtukntdv65l36gbohtpgp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bizbora"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
