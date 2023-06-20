@@ -1,6 +1,7 @@
 import 'package:bizbora/constants/colors.dart';
 import 'package:bizbora/constants/textstyle.dart';
 import 'package:bizbora/screens/addcart_screen.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

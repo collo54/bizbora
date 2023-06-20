@@ -3,6 +3,7 @@ import 'package:bizbora/api/api_service.dart';
 import 'package:bizbora/constants/textstyle.dart';
 import 'package:bizbora/models/address_model.dart';
 import 'package:bizbora/models/create_customer_request.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,7 +33,7 @@ class _AddCartDesktopLayoutState extends State<AddCartDesktopLayout> {
     super.dispose();
   }
 
-  Future<void> sendAPItest() async {
+  Future<void> _sendAPItest() async {
     try {
       String accesstoken = kaccesstoken;
 
@@ -72,6 +73,7 @@ class _AddCartDesktopLayoutState extends State<AddCartDesktopLayout> {
       showNoPermissionBluetoothDialog(response.toString());
     } catch (e) {
       showNoPermissionBluetoothDialog(e.toString());
+      rethrow;
     }
   }
 
@@ -341,7 +343,7 @@ class _AddCartDesktopLayoutState extends State<AddCartDesktopLayout> {
                             color: kblack08, // Button color
                             child: InkWell(
                               onTap: () async {
-                                await sendAPItest();
+                                await _sendAPItest();
                               },
                               child: SizedBox(
                                 width: 150,

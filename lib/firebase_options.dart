@@ -50,6 +50,7 @@ class DefaultFirebaseOptions {
     projectId: 'bizbora',
     authDomain: 'bizbora.firebaseapp.com',
     storageBucket: 'bizbora.appspot.com',
+    measurementId: 'G-1YFG7R4NWS',
   );
 
   static const FirebaseOptions android = FirebaseOptions(

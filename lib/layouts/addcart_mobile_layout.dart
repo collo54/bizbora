@@ -4,6 +4,7 @@ import 'package:bizbora/api/environment.dart';
 import 'package:bizbora/constants/textstyle.dart';
 import 'package:bizbora/models/address_model.dart';
 import 'package:bizbora/models/create_customer_request.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,7 +20,8 @@ class AddCartMobileLayout extends StatefulWidget {
 }
 
 class _AddCartMobileLayoutState extends State<AddCartMobileLayout> {
-  Uuid uuid = const Uuid();
+  Uuid _uuid = const Uuid();
+  int _photo = 1;
 
   @override
   void initState() {
@@ -31,7 +33,7 @@ class _AddCartMobileLayoutState extends State<AddCartMobileLayout> {
     super.dispose();
   }
 
-  Future<void> sendAPItest() async {
+  Future<void> _sendAPItest() async {
     try {
       String accesstoken = kaccesstoken;
 
@@ -51,7 +53,7 @@ class _AddCartMobileLayoutState extends State<AddCartMobileLayout> {
 
       final CreateCustomerRequestModel requestModel =
           CreateCustomerRequestModel(
-        idempotencyKey: uuid.v1(),
+        idempotencyKey: _uuid.v1(),
         givenName: 'collins martin',
         familyName: 'menelik',
         companyName: 'new haven',
@@ -247,7 +249,7 @@ class _AddCartMobileLayoutState extends State<AddCartMobileLayout> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.asset(
-                  'assets/images/Screenshot2-1.png',
+                  'assets/images/Screenshot2-$_photo.png',
                   height: 233,
                   width: 292,
                   fit: BoxFit.cover,
@@ -276,30 +278,59 @@ class _AddCartMobileLayoutState extends State<AddCartMobileLayout> {
                           color: kblack08,
                         ),
                       ),
+                      child: InkWell(
+                        onTap: () {
+                          _sendAPItest();
+                          setState(() {
+                            _photo = 1;
+                          });
+                        },
+                        child: Image.asset(
+                          'assets/images/Screenshot2-1.png',
+                          height: 50,
+                          width: 50,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          _photo = 2;
+                        });
+                      },
                       child: Image.asset(
-                        'assets/images/Screenshot2-1.png',
+                        'assets/images/Screenshot2-2.png',
                         height: 50,
                         width: 50,
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Image.asset(
-                      'assets/images/Screenshot2-2.png',
-                      height: 50,
-                      width: 50,
-                      fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          _photo = 3;
+                        });
+                      },
+                      child: Image.asset(
+                        'assets/images/Screenshot2-3.png',
+                        height: 50,
+                        width: 50,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    Image.asset(
-                      'assets/images/Screenshot2-3.png',
-                      height: 50,
-                      width: 50,
-                      fit: BoxFit.cover,
-                    ),
-                    Image.asset(
-                      'assets/images/Screenshot2-4.png',
-                      height: 50,
-                      width: 50,
-                      fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          _photo = 4;
+                        });
+                      },
+                      child: Image.asset(
+                        'assets/images/Screenshot2-4.png',
+                        height: 50,
+                        width: 50,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ],
                 ),
@@ -316,7 +347,9 @@ class _AddCartMobileLayoutState extends State<AddCartMobileLayout> {
               child: Text(
                 'White Stain Console Table, a perfect addition to elevate your home decor. Crafted with meticulous attention to detail, this elegant piece boasts a sleek white finish that effortlessly complements any interior style. Its compact design makes it ideal for narrow spaces, while the spacious tabletop provides ample room for displaying your favorite decor items or storing everyday essentials. The sturdy construction ensures durability, while the stain-resistant surface allows for easy maintenance.',
                 style: GoogleFonts.inter(
-                  textStyle: w600Size12Colorblack08Spacing20,
+                  textStyle: kIsWeb
+                      ? w600Size12Colorblack08Spacing20
+                      : w600Size14Colorblack08Spacing20,
                 ),
               ),
             ),

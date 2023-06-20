@@ -39,6 +39,13 @@ TextStyle w600Size12Colorblack08Spacing20 = const TextStyle(
   height: 2,
 );
 
+TextStyle w600Size14Colorblack08Spacing20 = const TextStyle(
+  color: kblack08,
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  height: 2,
+);
+
 TextStyle w600Size16Colorblue08Spacing20 = const TextStyle(
   color: kblue,
   fontSize: 16,
